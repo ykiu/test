@@ -11,7 +11,7 @@ class TheWindow(QWidget):
         
     def initUI(self):
         price = QLabel('値段')
-        price_input = QLineEdit()
+        self.price_input = QLineEdit()
         money = QLabel('お預り')
         moneyEdit = QLineEdit()
         okButton = QPushButton('OK')
@@ -20,7 +20,7 @@ class TheWindow(QWidget):
         
         grid = QGridLayout()
         grid.addWidget(price, 1, 0)
-        grid.addWidget(price_input, 1, 1)
+        grid.addWidget(self.price_input, 1, 1)
         grid.addWidget(money, 2, 0)
         grid.addWidget(moneyEdit, 2, 1)
         grid.addWidget(okButton, 3, 2)
@@ -37,7 +37,6 @@ class TheWindow(QWidget):
 
     def button_command(self):
         price_input_value = self.price_input.text()
-        
 
 app = QApplication(sys.argv)
 ex = TheWindow()
