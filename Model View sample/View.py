@@ -26,7 +26,8 @@ class TheWindow(QWidget):
         grid.addWidget(okButton, 3, 2)
         grid.addWidget(change, 4, 0)
         grid.addWidget(changeValue, 4, 1)
-                
+
+        #下のsetLayoutはQWidgetのメソッド
         self.setLayout(grid)
 
         okButton.clicked.connect(self.button_command)
