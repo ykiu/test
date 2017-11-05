@@ -1,7 +1,5 @@
+def calculate(a, b):
+    return b - a
 
 
-
-
-
-
-changeValue = '1234'
+changeValue = ''

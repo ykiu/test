@@ -36,11 +36,14 @@ class TheWindow(QWidget):
         self.show()
 
     def button_command(self):
-        price_input_value = self.price_input.text()
-        money_input_value = self.money_input.text()
-        print (price_input_value)
-        print (money_input_value)
-        
+        price_input_value = int(self.price_input.text())
+        money_input_value = int(self.money_input.text())
+        print(price_input_value)
+        print(money_input_value)
+        calculatedValue = str(Model.calculate(price_input_value, money_input_value))
+        print(calculatedValue)
+        # self.changeValue.setText(calculatedValue)
+
 
 app = QApplication(sys.argv)
 ex = TheWindow()
