@@ -16,7 +16,7 @@ class TheWindow(QWidget):
         self.money_input = QLineEdit()
         okButton = QPushButton('OK')
         change = QLabel('おつり')
-        changeValue = QLabel('')
+        self.changeValue = QLabel('')
         
         grid = QGridLayout()
         grid.addWidget(price, 1, 0)
@@ -25,7 +25,7 @@ class TheWindow(QWidget):
         grid.addWidget(self.money_input, 2, 1)
         grid.addWidget(okButton, 3, 2)
         grid.addWidget(change, 4, 0)
-        grid.addWidget(changeValue, 4, 1)
+        grid.addWidget(self.changeValue, 4, 1)
 
         #下のsetLayoutはQWidgetのメソッド
         self.setLayout(grid)
@@ -41,7 +41,7 @@ class TheWindow(QWidget):
         money_input_value = int(self.money_input.text())
         calculatedValue = str(Model.calculate(price_input_value, money_input_value))
         print(calculatedValue)
-        # self.changeValue.setText(calculatedValue)
+        self.changeValue.setText(calculatedValue)
 
 
 app = QApplication(sys.argv)
